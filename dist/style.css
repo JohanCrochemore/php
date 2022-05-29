@@ -1,0 +1,223 @@
+/* line 1, ../Project/php/src/style.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 8, ../Project/php/src/style.scss */
+body {
+  background-color: #666;
+}
+
+/* line 12, ../Project/php/src/style.scss */
+header {
+  background-color: black;
+}
+
+/* line 15, ../Project/php/src/style.scss */
+header div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* line 20, ../Project/php/src/style.scss */
+header div a {
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 2em;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* line 28, ../Project/php/src/style.scss */
+header div a.courante {
+  text-shadow: 2px 0 0 #555, -2px 0 0 #555, 0 2px 0 #555, 0 -2px 0 #555, 1px 1px #555, -1px -1px 0 #555, 1px -1px 0 #555, -1px 1px 0 #555;
+  color: red;
+}
+
+/* line 36, ../Project/php/src/style.scss */
+section.accueil article {
+  border: 1px solid white;
+  margin: 5px;
+  background-color: #999;
+}
+
+/* line 42, ../Project/php/src/style.scss */
+section.accueil article .card {
+  border: 1px solid white;
+  margin: 5px;
+}
+
+/* line 46, ../Project/php/src/style.scss */
+section.accueil article .card a {
+  text-decoration: none !important;
+  color: black;
+}
+
+/* line 51, ../Project/php/src/style.scss */
+section.accueil article .card .image {
+  display: block;
+  width: 100%;
+}
+
+/* line 59, ../Project/php/src/style.scss */
+section.accueil article .card .container .description, section.accueil article .card .container .titre {
+  padding: 5px;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+}
+
+/* line 70, ../Project/php/src/style.scss */
+section.accueil article .card .container .description {
+  height: 70px;
+  background-color: #b5ceff;
+}
+
+/* line 74, ../Project/php/src/style.scss */
+section.accueil article .card .container .description q {
+  font-style: italic;
+}
+
+/* line 78, ../Project/php/src/style.scss */
+section.accueil article .card .container .description p {
+  align-self: end;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+/* line 85, ../Project/php/src/style.scss */
+section.accueil article .card .container .titre {
+  background-color: #75bff7;
+}
+
+/* line 94, ../Project/php/src/style.scss */
+section.article article {
+  border: 1px solid white;
+  margin: 5px;
+  background-color: #999;
+}
+
+/* line 99, ../Project/php/src/style.scss */
+section.article article .image {
+  width: 100%;
+  display: block;
+}
+
+/* line 104, ../Project/php/src/style.scss */
+section.article article .titre {
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid white;
+  background-color: #75bff7;
+}
+
+/* line 111, ../Project/php/src/style.scss */
+section.article article #contenu {
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid white;
+  background-color: #b5ceff;
+}
+
+/* line 116, ../Project/php/src/style.scss */
+section.article article #contenu p {
+  text-align: justify;
+  text-indent: 3%;
+}
+
+/* line 123, ../Project/php/src/style.scss */
+aside {
+  border: 1px solid white;
+  margin: 5px;
+  background-color: #999;
+}
+
+/* line 128, ../Project/php/src/style.scss */
+aside .image {
+  width: 100%;
+  display: block;
+}
+
+/* line 133, ../Project/php/src/style.scss */
+aside ul {
+  list-style: inside;
+  list-style-type: "\27B5";
+  list-style-position: inside;
+  margin: 10px;
+  border: 1px solid white;
+  background-color: #b5ceff;
+}
+
+/* line 141, ../Project/php/src/style.scss */
+aside ul ul {
+  border: none;
+  list-style: inside;
+  list-style-type: "\2694";
+}
+
+@media all and (min-width: 768px) {
+  /* line 153, ../Project/php/src/style.scss */
+  section.accueil article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* line 158, ../Project/php/src/style.scss */
+  section.accueil aside, section.article aside {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
+  /* line 163, ../Project/php/src/style.scss */
+  section.accueil aside .image, section.article aside .image {
+    height: 100%;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  /* line 175, ../Project/php/src/style.scss */
+  section.accueil {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+  /* line 179, ../Project/php/src/style.scss */
+  section.accueil article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* line 184, ../Project/php/src/style.scss */
+  section.accueil aside {
+    display: flex;
+    flex-direction: column;
+  }
+  /* line 188, ../Project/php/src/style.scss */
+  section.accueil aside .image {
+    height: auto;
+  }
+  /* line 196, ../Project/php/src/style.scss */
+  section.article {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  /* line 200, ../Project/php/src/style.scss */
+  section.article article {
+    width: 75%;
+  }
+  /* line 204, ../Project/php/src/style.scss */
+  section.article aside {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+  }
+  /* line 209, ../Project/php/src/style.scss */
+  section.article aside .image {
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
